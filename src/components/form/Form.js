@@ -1,6 +1,7 @@
 import React from 'react';
-import Education from './Education';
-import GeneralInformation from './GeneralInformation';
+import Education from './sections/Education';
+import Experience from './sections/Experience';
+import GeneralInformation from './sections/GeneralInformation';
 
 class Form extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class Form extends React.Component {
       <form className='form'>
         <GeneralInformation />
         <Education />
+        <Experience />
       </form>
     );
   }

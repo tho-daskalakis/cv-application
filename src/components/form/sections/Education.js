@@ -15,13 +15,13 @@ class Education extends React.Component {
         <input id='school' type='text' maxLength='40'></input>
 
         <label htmlFor='from'>From:</label>
-        <input id='from' type='number' min='1000' max='2099'></input>
+        <input id='from' type='date'></input>
 
         <label htmlFor='until'>Until:</label>
-        <input id='from' type='number' min='1000' max='2099'></input>
+        <input id='from' type='date'></input>
 
-        <label htmlFor='title'>Title:</label>
-        <input id='title' type='text' maxLength='40'></input>
+        <label htmlFor='degree'>Degree:</label>
+        <input id='degree' type='text' maxLength='40'></input>
       </fieldset>
     );
   }

@@ -14,10 +14,16 @@ class GeneralInformation extends React.Component {
         <label htmlFor='name'>Name:</label>
         <input id='name' type='text' maxLength='40'></input>
 
-        <label htmlFor='age'>Age:</label>
-        <input id='age' type='number' min='1' max='99'></input>
+        <label htmlFor='title'>Title:</label>
+        <input id='title' type='text'></input>
 
-        <label htmlFor='email'>e-mail:</label>
+        <label htmlFor='address'>Address:</label>
+        <input id='address' type='text'></input>
+
+        <label htmlFor='phone'>Phone:</label>
+        <input id='phone' type='text'></input>
+
+        <label htmlFor='email'>email:</label>
         <input id='email' type='email'></input>
       </fieldset>
     );
