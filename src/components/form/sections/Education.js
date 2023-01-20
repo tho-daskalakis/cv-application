@@ -1,11 +1,6 @@
 import React from 'react';
 
 class Education extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { props };
-  }
-
   render() {
     return (
       <fieldset className='column'>
