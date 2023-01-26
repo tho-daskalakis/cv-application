@@ -12,7 +12,7 @@ class GeneralInformation extends React.Component {
         <label htmlFor='title'>Title:</label>
         <input id='title' type='text'></input>
 
-        <label htmlFor='address'>Address:</label>
+        <label htmlFor='address'>Province / State, Country:</label>
         <input id='address' type='text'></input>
 
         <label htmlFor='phone'>Phone:</label>

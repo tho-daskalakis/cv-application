@@ -11,7 +11,7 @@ class Form extends React.Component {
         <GeneralInformation />
         <Education />
         <Experience />
-        <Skills skills={this.props.formData.skills} />
+        <Skills />
       </form>
     );
   }
