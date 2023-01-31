@@ -1,17 +1,18 @@
 import React from 'react';
 import uniqid from 'uniqid';
+import Button from '../../Button';
 
 class Skills extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { skills: [{ id: uniqid(), text: 'sample skill' }] };
+    this.state = { skills: [{ id: uniqid(), text: '' }] };
   }
 
-  addSkill = () => {
+  addSkill = (e) => {
+    e.preventDefault();
+
     this.setState({
-      skills: this.state.skills.concat([
-        { id: uniqid(), text: 'another skill' },
-      ]),
+      skills: this.state.skills.concat([{ id: uniqid(), text: '' }]),
     });
   };
 
@@ -27,9 +28,7 @@ class Skills extends React.Component {
           ))}
         </ul>
 
-        <button onClick={this.addSkill} type='button' className='add-skill-btn'>
-          Add skill
-        </button>
+        <Button text='Add skill' handleClick={this.addSkill} />
       </fieldset>
     );
   }
