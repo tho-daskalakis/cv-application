@@ -28,7 +28,7 @@ class Skills extends React.Component {
           ))}
         </ul>
 
-        <Button text='Add skill' handleClick={this.addSkill} />
+        <Button text='Add skill' handleClick={this.addSkill} type='button' />
       </fieldset>
     );
   }
