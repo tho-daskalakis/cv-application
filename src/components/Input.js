@@ -3,7 +3,7 @@ import React from 'react';
 class Input extends React.Component {
   constructor(props) {
     super(props);
-    this.state.value = '';
+    this.state = { value: '' };
   }
 
   render() {
@@ -11,7 +11,7 @@ class Input extends React.Component {
       <input
         id={this.props.id}
         type={this.props.type}
-        value={this.state.value}
+        defaultValue={this.state.value}
         onChange={this.props.handleChange}></input>
     );
   }
