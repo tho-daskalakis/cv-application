@@ -6,7 +6,34 @@ class Experience extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+
+    this.handleCompanyChange = this.handleCompanyChange.bind(this);
+    this.handleFromChange = this.handleFromChange.bind(this);
+    this.handleUntilChange = this.handleUntilChange.bind(this);
+    this.handlePositionChange = this.handlePositionChange.bind(this);
+    this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
   }
+
+  handleCompanyChange(e) {
+    this.setState({ company: e.target.value });
+  }
+
+  handleFromChange(e) {
+    this.setState({ from: e.target.value });
+  }
+
+  handleUntilChange(e) {
+    this.setState({ until: e.target.value });
+  }
+
+  handlePositionChange(e) {
+    this.setState({ position: e.target.value });
+  }
+
+  handleDescriptionChange(e) {
+    this.setState({ description: e.target.value });
+  }
+
   render() {
     return (
       <fieldset className='column'>
@@ -16,40 +43,40 @@ class Experience extends React.Component {
         <Input
           id='experience-company'
           type='text'
-          value={this.state.experienceInput}
-          onChange={this.experienceInputChange}
+          value={this.state.company}
+          onChange={this.handleCompanyChange}
         />
 
         <Label id='experience-from' labelText='From:' />
         <Input
           id='experience-from'
           type='date'
-          value={this.state.experienceStart}
-          onChange={this.experienceStartChange}
+          value={this.state.from}
+          onChange={this.handleFromChange}
         />
 
         <Label id='experience-until' labelText='Until:' />
         <Input
           id='experience-until'
           type='date'
-          value={this.state.experienceUntil}
-          onChange={this.experienceUntilChange}
+          value={this.state.until}
+          onChange={this.handleUntilChange}
         />
 
         <Label id='experience-position' labelText='Position:' />
         <Input
           id='experience-position'
           type='text'
-          value={this.state.experiencePosition}
-          onChange={this.experiencePositionChange}
+          value={this.state.position}
+          onChange={this.handlePositionChange}
         />
 
         <Label id='experience-description' labelText='Description:' />
         <Input
           id='experience-description'
           type='text'
-          value={this.state.experienceDescription}
-          onChange={this.experienceDescriptionChange}
+          value={this.state.description}
+          onChange={this.handleDescriptionChange}
         />
       </fieldset>
     );
