@@ -6,6 +6,32 @@ class GeneralInformation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleTitleChange = this.handleTitleChange.bind(this);
+    this.handleAddressChange = this.handleAddressChange.bind(this);
+    this.handlePhoneChange = this.handlePhoneChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+  }
+
+  handleNameChange(e) {
+    this.setState({ name: e.target.value });
+  }
+
+  handleTitleChange(e) {
+    this.setState({ title: e.target.value });
+  }
+
+  handleAddressChange(e) {
+    this.setState({ address: e.target.value });
+  }
+
+  handlePhoneChange(e) {
+    this.setState({ phone: e.target.value });
+  }
+
+  handleEmailChange(e) {
+    this.setState({ email: e.target.value });
   }
 
   render() {
