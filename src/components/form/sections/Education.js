@@ -15,18 +15,22 @@ class Education extends React.Component {
 
   handleSchoolChange(e) {
     this.setState({ school: e.target.value });
+    this.props.updateFormState(this.state);
   }
 
   handleFromChange(e) {
     this.setState({ from: e.target.value });
+    this.props.updateFormState(this.state);
   }
 
   handleUntilChange(e) {
     this.setState({ until: e.target.value });
+    this.props.updateFormState(this.state);
   }
 
   handleDegreeChange(e) {
     this.setState({ degree: e.target.value });
+    this.props.updateFormState(this.state);
   }
 
   render() {

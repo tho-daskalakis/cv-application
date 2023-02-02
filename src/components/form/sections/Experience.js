@@ -16,22 +16,27 @@ class Experience extends React.Component {
 
   handleCompanyChange(e) {
     this.setState({ company: e.target.value });
+    this.props.updateFormState(this.state);
   }
 
   handleFromChange(e) {
     this.setState({ from: e.target.value });
+    this.props.updateFormState(this.state);
   }
 
   handleUntilChange(e) {
     this.setState({ until: e.target.value });
+    this.props.updateFormState(this.state);
   }
 
   handlePositionChange(e) {
     this.setState({ position: e.target.value });
+    this.props.updateFormState(this.state);
   }
 
   handleDescriptionChange(e) {
     this.setState({ description: e.target.value });
+    this.props.updateFormState(this.state);
   }
 
   render() {

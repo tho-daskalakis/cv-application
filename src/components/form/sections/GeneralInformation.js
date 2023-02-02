@@ -16,22 +16,27 @@ class GeneralInformation extends React.Component {
 
   handleNameChange(e) {
     this.setState({ name: e.target.value });
+    this.props.updateFormState(this.state);
   }
 
   handleTitleChange(e) {
     this.setState({ title: e.target.value });
+    this.props.updateFormState(this.state);
   }
 
   handleAddressChange(e) {
     this.setState({ address: e.target.value });
+    this.props.updateFormState(this.state);
   }
 
   handlePhoneChange(e) {
     this.setState({ phone: e.target.value });
+    this.props.updateFormState(this.state);
   }
 
   handleEmailChange(e) {
     this.setState({ email: e.target.value });
+    this.props.updateFormState(this.state);
   }
 
   render() {
