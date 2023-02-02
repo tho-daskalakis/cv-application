@@ -5,7 +5,7 @@ import Button from '../../Button';
 class Skills extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { skills: [{ id: uniqid(), text: '' }] };
+    this.state = { skills: [] };
   }
 
   addSkill = (e) => {
