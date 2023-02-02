@@ -11,7 +11,6 @@ class Input extends React.Component {
       <input
         id={this.props.id}
         type={this.props.type}
-        defaultValue={this.state.value}
         onChange={this.props.handleChange}></input>
     );
   }
