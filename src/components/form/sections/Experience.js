@@ -1,25 +1,56 @@
 import React from 'react';
+import Input from '../../Input';
+import Label from '../../Label';
 
 class Experience extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   render() {
     return (
       <fieldset className='column'>
         <legend>Experience</legend>
 
-        <label htmlFor='company'>Company:</label>
-        <input id='company' type='text'></input>
+        <Label id='experience-company' labelText='Company:' />
+        <Input
+          id='experience-company'
+          type='text'
+          value={this.state.experienceInput}
+          onChange={this.experienceInputChange}
+        />
 
-        <label htmlFor='from'>From:</label>
-        <input id='from' type='date'></input>
+        <Label id='experience-from' labelText='From:' />
+        <Input
+          id='experience-from'
+          type='date'
+          value={this.state.experienceStart}
+          onChange={this.experienceStartChange}
+        />
 
-        <label htmlFor='until'>Until:</label>
-        <input id='until' type='date'></input>
+        <Label id='experience-until' labelText='Until:' />
+        <Input
+          id='experience-until'
+          type='date'
+          value={this.state.experienceUntil}
+          onChange={this.experienceUntilChange}
+        />
 
-        <label htmlFor='position'>Position:</label>
-        <input id='position' type='text'></input>
+        <Label id='experience-position' labelText='Position:' />
+        <Input
+          id='experience-position'
+          type='text'
+          value={this.state.experiencePosition}
+          onChange={this.experiencePositionChange}
+        />
 
-        <label htmlFor='description'>Description:</label>
-        <input id='description' type='text'></input>
+        <Label id='experience-description' labelText='Description:' />
+        <Input
+          id='experience-description'
+          type='text'
+          value={this.state.experienceDescription}
+          onChange={this.experienceDescriptionChange}
+        />
       </fieldset>
     );
   }
