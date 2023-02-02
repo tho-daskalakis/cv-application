@@ -5,14 +5,28 @@ import Label from '../../Label';
 class Education extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      schoolInput: '',
-    };
-    this.schoolInputChange = this.schoolInputChange.bind(this);
+    this.state = {};
+
+    this.handleSchoolChange = this.handleSchoolChange.bind(this);
+    this.handleFromChange = this.handleFromChange.bind(this);
+    this.handleUntilChange = this.handleUntilChange.bind(this);
+    this.handleDegreeChange = this.handleDegreeChange.bind(this);
   }
 
-  schoolInputChange(e) {
-    this.setState({ schoolInput: e.target.value });
+  handleSchoolChange(e) {
+    this.setState({ school: e.target.value });
+  }
+
+  handleFromChange(e) {
+    this.setState({ from: e.target.value });
+  }
+
+  handleUntilChange(e) {
+    this.setState({ until: e.target.value });
+  }
+
+  handleDegreeChange(e) {
+    this.setState({ degree: e.target.value });
   }
 
   render() {
@@ -24,32 +38,32 @@ class Education extends React.Component {
         <Input
           id='school'
           type='text'
-          value={this.state.schoolInput}
-          handleChange={this.schoolInputChange}
+          value={this.state.school}
+          handleChange={this.handleSchoolChange}
         />
 
         <Label id='education-from' labelText='From:' />
         <Input
           id='education-from'
           type='date'
-          value={this.state.educationStart}
-          handleChange={this.educationStartChange}
+          value={this.state.from}
+          handleChange={this.handleFromChange}
         />
 
         <Label id='education-until' labelText='Until:' />
         <Input
           id='education-until'
           type='date'
-          value={this.state.educationUntil}
-          handleChange={this.educationUntilChange}
+          value={this.state.until}
+          handleChange={this.handleUntilChange}
         />
 
         <Label id='education-degree' labelText='Degree:' />
         <Input
           id='education-degree'
           type='text'
-          value={this.state.educationDegree}
-          handleChange={this.educationDegreeChange}
+          value={this.state.degree}
+          handleChange={this.handleDegreeChange}
         />
       </fieldset>
     );
